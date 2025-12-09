@@ -7,31 +7,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- SVG sprite (icônes réutilisables) -->
   <svg style="display:none" aria-hidden="true">
     <symbol id="icon-home" viewBox="0 0 24 24">
       <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" fill="currentColor"/>
     </symbol>
+
     <symbol id="icon-sport" viewBox="0 0 24 24">
       <path d="M12 2l2.2 4.4L19 8l-3.6 2.6L16 15l-4-2.2L8 15l.6-4.4L5 8l4.8-1.6L12 2z" fill="currentColor"/>
     </symbol>
+
     <symbol id="icon-music" viewBox="0 0 24 24">
       <path d="M9 17a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm10-2V3l-8 2v10" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+
     <symbol id="icon-projects" viewBox="0 0 24 24">
       <path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+
     <symbol id="icon-contact" viewBox="0 0 24 24">
       <path d="M4 4h16v12H4z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M22 18v2a2 2 0 0 1-2 2H4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+
     <symbol id="icon-settings" viewBox="0 0 24 24">
       <path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7z" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M19.4 15a1.7 1.7 0 0 0 .32 1.84l.07.08a1 1 0 0 1-.24 1.57l-1.14.66a1 1 0 0 0-.41 1.19l.22 1.24a1 1 0 0 1-.93 1.2h-1.3a1 1 0 0 0-.98.78l-.2 1.26a1 1 0 0 1-1.17.84l-1.28-.26a1 1 0 0 0-1.11.37l-.77 1.02" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19.4 15a1.7 1.7 0 0 0 .32 1.84l.07.08a1 1 0 0 1-.24 1.57l-1.14.66a1 1 0 0 0-.41 1.19l .22 1.24a1 1 0 0 1-.93 1.2h-1.3a1 1 0 0 0-.98.78l-.2 1.26a1 1 0 0 1-1.17.84l-1.28-.26a1 1 0 0 0-1.11.37l-.77 1.02" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
   </svg>
 
+  <!-- NAVIGATION -->
   <nav class="site-nav" role="navigation" aria-label="Navigation principale">
     <div class="nav-inner container">
       <div class="brand-wrap">
@@ -44,75 +51,65 @@
 
       <div class="main-nav" aria-hidden="false">
         <ul class="nav-list" role="menubar">
-          <li role="none"><a role="menuitem" href="#presentation" data-scroll><svg class="ico" aria-hidden="true"><use href="#icon-home"></use></svg> Présentation</a></li>
-          <li role="none"><a role="menuitem" href="#sport-valeurs" data-scroll><svg class="ico" aria-hidden="true"><use href="#icon-sport"></use></svg> Sport</a></li>
-          <li role="none"><a role="menuitem" href="#musique" data-scroll><svg class="ico" aria-hidden="true"><use href="#icon-music"></use></svg> Musique</a></li>
-          <li role="none"><a role="menuitem" href="#projets-vision" data-scroll><svg class="ico" aria-hidden="true"><use href="#icon-projects"></use></svg> Projets</a></li>
-          <li role="none"><a role="menuitem" href="#contact" data-scroll><svg class="ico" aria-hidden="true"><use href="#icon-contact"></use></svg> Contact</a></li>
+          <li><a href="#presentation" data-scroll><svg class="ico"><use href="#icon-home"></use></svg> Présentation</a></li>
+          <li><a href="#sport-valeurs" data-scroll><svg class="ico"><use href="#icon-sport"></use></svg> Sport</a></li>
+          <li><a href="#musique" data-scroll><svg class="ico"><use href="#icon-music"></use></svg> Musique</a></li>
+          <li><a href="#projets-vision" data-scroll><svg class="ico"><use href="#icon-projects"></use></svg> Projets</a></li>
+          <li><a href="#contact" data-scroll><svg class="ico"><use href="#icon-contact"></use></svg> Contact</a></li>
         </ul>
       </div>
 
       <div class="nav-actions">
-        <button id="theme-toggle" class="icon-btn" aria-pressed="false" title="Mode sombre / clair" aria-label="Basculer le thème">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-settings"></use></svg>
+        <button id="theme-toggle" class="icon-btn" aria-pressed="false">
+          <svg class="ico"><use href="#icon-settings"></use></svg>
         </button>
-        <button id="open-settings" class="icon-btn" title="Paramètres" aria-label="Ouvrir paramètres">⚙️</button>
+        <button id="open-settings" class="icon-btn">⚙️</button>
       </div>
     </div>
   </nav>
 
-  <!-- Settings panel -->
-  <aside id="settings-panel" class="settings-panel" aria-hidden="true" role="dialog" aria-label="Paramètres d'apparence">
+  <!-- SETTINGS PANEL -->
+  <aside id="settings-panel" class="settings-panel" aria-hidden="true" role="dialog">
     <div class="settings-inner">
       <header>
         <h3>Apparence</h3>
-        <button id="close-settings" class="close-btn" aria-label="Fermer">✕</button>
+        <button id="close-settings" class="close-btn">✕</button>
       </header>
 
       <div class="setting-item">
         <label class="switch">
           <input type="checkbox" id="pref-dark">
-          <span class="slider" aria-hidden="true"></span>
+          <span class="slider"></span>
         </label>
         <div class="setting-meta">
           <strong>Mode sombre</strong>
-          <p class="muted">Active un thème sombre pour la lecture nocturne.</p>
         </div>
       </div>
 
       <div class="setting-item">
         <label class="switch">
           <input type="checkbox" id="pref-avatar-round" checked>
-          <span class="slider" aria-hidden="true"></span>
+          <span class="slider"></span>
         </label>
         <div class="setting-meta">
           <strong>Avatar rond</strong>
-          <p class="muted">Choisir un avatar circulaire avec anneau bleu.</p>
         </div>
       </div>
 
       <div class="setting-item">
         <button id="pref-reset" class="btn small">Réinitialiser</button>
-        <div class="setting-meta">
-          <strong>Réinitialiser les préférences</strong>
-          <p class="muted">Revenir aux paramètres par défaut.</p>
-        </div>
       </div>
     </div>
   </aside>
 
+  <!-- HERO SECTION (ACCUEIL) ✔ VERSION NETTOYÉE -->
   <header class="hero container" id="home">
     <figure class="profile-figure" id="profile-figure">
-      <!-- 👉 PHOTO DE PROFIL MODIFIÉE ICI -->
       <picture>
-        <img
-          src="images/francois.jpg"
-          alt="Photo de François Naissant"
-          class="profile-photo"
-          width="200" height="260" loading="lazy">
+        <img src="images/francois.jpg" alt="Photo de François Naissant" class="profile-photo" width="200" height="260" loading="lazy">
       </picture>
 
-      <figcaption class="profile-badges" aria-hidden="true">
+      <figcaption class="profile-badges">
         <span class="badge">Handball</span>
         <span class="badge">Musique</span>
       </figcaption>
@@ -120,10 +117,8 @@
 
     <div class="hero-text">
       <h1>Bienvenue sur mon portfolio</h1>
-      <p>
-        Étudiant en licence commercialisation de produits et services sportifs — alternant chez Energie Forme Vernouillet.
-        Passion : handball & musique. Découvre mon parcours, mes projets et mes valeurs.
-      </p>
+      <p>Étudiant en licence commercialisation de produits et services sportifs — alternant chez Energie Forme Vernouillet. Passion : handball & musique.</p>
+
       <div class="ctas">
         <a href="#presentation" class="btn primary" data-scroll>En savoir plus</a>
         <a href="#projets-vision" class="btn ghost" data-scroll>Mes projets</a>
@@ -131,79 +126,72 @@
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="container">
+
     <section id="presentation" class="card reveal">
-      <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-home"></use></svg> Présentation & Parcours</h2>
+      <h2><svg class="small-ico"><use href="#icon-home"></use></svg> Présentation & Parcours</h2>
+
       <div class="section-group">
         <h3>À propos de moi</h3>
-        <p>
-          Hello, je m'appelle François Naissant, j'ai 20 ans et j'étudie à l'Ileps (Cergy) en licence commercialisation de produits et services sportifs.
-        </p>
+        <p>Hello, je m'appelle François Naissant, j'ai 20 ans et j'étudie à l'Ileps (Cergy)...</p>
       </div>
 
       <div class="section-group">
         <h3>Mon parcours sportif</h3>
-        <p>
-          Handball depuis l'âge de 10 ans. En 2023, champion régional U18 — une expérience collective forte qui a forgé ma résilience.
-        </p>
+        <p>Handball depuis l'âge de 10 ans. En 2023, champion régional U18.</p>
       </div>
     </section>
 
     <section id="sport-valeurs" class="card reveal">
-      <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-sport"></use></svg> Le Sport & Mes valeurs</h2>
-      <div class="section-group">
-        <h3>Pourquoi le sport ?</h3>
-        <p>
-          Le sport est un vecteur d'épanouissement, de respect et d'intégration — il m'a appris la rigueur et le collectif.
-        </p>
-      </div>
+      <h2><svg class="small-ico"><use href="#icon-sport"></use></svg> Le Sport & Mes valeurs</h2>
+      <p>Le sport m’a appris la rigueur, le respect et l’esprit d’équipe.</p>
 
-      <div class="section-group">
-        <h3>Mes valeurs</h3>
-        <ul>
-          <li>Respect</li>
-          <li>Engagement</li>
-          <li>Tolérance</li>
-          <li>Esprit d'équipe</li>
-          <li>Persévérance</li>
-        </ul>
-      </div>
+      <ul>
+        <li>Respect</li>
+        <li>Engagement</li>
+        <li>Tolérance</li>
+        <li>Esprit d'équipe</li>
+        <li>Persévérance</li>
+      </ul>
     </section>
 
     <section id="musique" class="card reveal">
-      <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-music"></use></svg> Ma passion pour la musique</h2>
-      <div class="section-group">
-        <p>
-          La musique m'aide à me concentrer, me motiver avant les matchs et créer une ambiance positive en tant que coach.
-        </p>
-      </div>
+      <h2><svg class="small-ico"><use href="#icon-music"></use></svg> Ma passion pour la musique</h2>
+      <p>La musique me motive, m’aide à me concentrer et inspire mes séances.</p>
     </section>
 
     <section id="projets-vision" class="card reveal">
-      <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-projects"></use></svg> Projets & Vision</h2>
+      <h2><svg class="small-ico"><use href="#icon-projects"></use></svg> Projets & Vision</h2>
+
       <div class="projets-list grid-3">
         <article class="projet-item card">
           <h3>Arbitre professionnel</h3>
-          <p>Objectif : arbitrer au plus haut niveau pour garantir le respect et la justice du jeu.</p>
+          <p>Arbitrer au plus haut niveau.</p>
         </article>
+
         <article class="projet-item card">
           <h3>Directeur de structure sportive</h3>
-          <p>Diriger une équipe vers l'excellence et favoriser l'accès au sport pour tous.</p>
+          <p>Diriger une organisation sportive.</p>
         </article>
+
         <article class="projet-item card">
           <h3>Transmission</h3>
-          <p>Former et inspirer la prochaine génération de sportifs et de coachs.</p>
+          <p>Inspirer la nouvelle génération.</p>
         </article>
       </div>
     </section>
 
     <section id="contact" class="card reveal">
-      <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-contact"></use></svg> Contact</h2>
-      <form id="contact-form" class="contact-form form-card" novalidate>
+      <h2><svg class="small-ico"><use href="#icon-contact"></use></svg> Contact</h2>
+
+      <form id="contact-form" class="contact-form" novalidate>
         <label for="email">Ton email :</label>
         <input type="email" id="email" placeholder="Ton adresse mail" required>
+
         <label for="message">Message :</label>
         <textarea id="message" placeholder="Écris-moi ici !" rows="5" required></textarea>
+
         <div class="form-actions">
           <button type="submit" class="btn primary">Envoyer</button>
           <button type="reset" class="btn ghost">Effacer</button>
@@ -214,6 +202,7 @@
         Ou via mail : <a href="mailto:nsntfra78@gmail.com">nsntfra78@gmail.com</a>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer container">
@@ -223,3 +212,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
