@@ -61,7 +61,7 @@
     </div>
   </nav>
 
-  <!-- Settings panel (avatar shape + dark mode + quick actions) -->
+  <!-- Settings panel -->
   <aside id="settings-panel" class="settings-panel" aria-hidden="true" role="dialog" aria-label="Paramètres d'apparence">
     <div class="settings-inner">
       <header>
@@ -103,17 +103,15 @@
 
   <header class="hero container" id="home">
     <figure class="profile-figure" id="profile-figure">
+      <!-- 👉 PHOTO DE PROFIL MODIFIÉE ICI -->
       <picture>
-        <!-- Remplace par tes fichiers : images/profile.webp, images/profile-800.jpg, images/profile-400.jpg -->
-        <source type="image/webp" srcset="images/profile.webp">
         <img
           src="images/francois.jpg"
-          srcset="images/francois.jpg 400w, images/francois.jpg 800w"
-          sizes="(max-width:700px) 40vw, 200px"
-          alt="Portrait en maillot de handball, bras croisés, souriant"
+          alt="Photo de François Naissant"
           class="profile-photo"
           width="200" height="260" loading="lazy">
       </picture>
+
       <figcaption class="profile-badges" aria-hidden="true">
         <span class="badge">Handball</span>
         <span class="badge">Musique</span>
@@ -134,7 +132,6 @@
   </header>
 
   <main class="container">
-    <!-- Presentation -->
     <section id="presentation" class="card reveal">
       <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-home"></use></svg> Présentation & Parcours</h2>
       <div class="section-group">
@@ -152,7 +149,6 @@
       </div>
     </section>
 
-    <!-- Sport & Valeurs -->
     <section id="sport-valeurs" class="card reveal">
       <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-sport"></use></svg> Le Sport & Mes valeurs</h2>
       <div class="section-group">
@@ -174,7 +170,6 @@
       </div>
     </section>
 
-    <!-- Musique -->
     <section id="musique" class="card reveal">
       <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-music"></use></svg> Ma passion pour la musique</h2>
       <div class="section-group">
@@ -184,7 +179,6 @@
       </div>
     </section>
 
-    <!-- Projets & Vision -->
     <section id="projets-vision" class="card reveal">
       <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-projects"></use></svg> Projets & Vision</h2>
       <div class="projets-list grid-3">
@@ -203,7 +197,6 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="card reveal">
       <h2><svg class="small-ico" aria-hidden="true"><use href="#icon-contact"></use></svg> Contact</h2>
       <form id="contact-form" class="contact-form form-card" novalidate>
